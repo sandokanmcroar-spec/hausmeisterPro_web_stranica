@@ -1,0 +1,6 @@
+{
+  "name": "Hausmeister Pro – Vision IT Systems",
+  "description": "Digitale Einsatzplanung, mehrsprachige Mitarbeiter-App und rechtssicherer Foto-Nachweis für Hausmeisterservices, Gebäudereinigung und Winterdienst.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
