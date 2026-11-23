@@ -411,6 +411,11 @@ export function HowItWorksAndPricing({ onNavigate }: HowItWorksAndPricingProps) 
                   <span>Paket „{activeTier.name}“ 60 Tage kostenlos testen</span>
                   <ArrowRight className="h-4 w-4 shrink-0" />
                 </button>
+
+                <p className="mt-3.5 text-xs leading-relaxed text-slate-400">
+                  Alle angegebenen Preise sind Endpreise. Gemäß § 19 UStG wird keine Umsatzsteuer
+                  berechnet und ausgewiesen (Kleinunternehmerregelung).
+                </p>
               </div>
             </div>
           </div>

@@ -59,9 +59,15 @@ export function Footer() {
           </nav>
         </div>
 
-        <div className="mt-8 border-t border-slate-800/80 pt-6 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between text-xs text-slate-500">
-          <p>© {new Date().getFullYear()} Vision IT Systems. Alle Rechte vorbehalten.</p>
-          <p>Serverstandort Deutschland · 100 % DSGVO-konform</p>
+        <div className="mt-8 border-t border-slate-800/80 pt-6 flex flex-col gap-3 text-xs text-slate-500">
+          <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+            <p>© {new Date().getFullYear()} Vision IT Systems. Alle Rechte vorbehalten.</p>
+            <p>Serverstandort Deutschland · 100 % DSGVO-konform</p>
+          </div>
+          <p className="text-slate-400">
+            Alle angegebenen Preise sind Endpreise. Gemäß § 19 UStG wird keine Umsatzsteuer berechnet
+            und ausgewiesen (Kleinunternehmerregelung).
+          </p>
         </div>
       </div>
 
