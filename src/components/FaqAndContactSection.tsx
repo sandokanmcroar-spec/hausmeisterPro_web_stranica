@@ -58,10 +58,25 @@ export function FaqAndContactSection() {
     return Object.keys(nextErrors).length === 0;
   };
 
+  const buildMailtoHref = () => {
+    const subject = `Pilot-Anfrage Hausmeister Pro – ${form.company}`;
+    const body = `Name: ${form.fullName}\nFirma: ${form.company}\nTelefon: ${form.phone}\nE-Mail: ${form.email}\nMitarbeiter: ${form.teamSize}`;
+    return `mailto:info@vision-it-systems.de?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(body)}`;
+  };
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!validate()) return;
     setSubmitted(true);
+    try {
+      const link = document.createElement('a');
+      link.href = buildMailtoHref();
+      link.click();
+    } catch {
+      // Fallback: user can click the direct mailto button in the confirmation view
+    }
   };
 
   return (
@@ -137,7 +152,8 @@ export function FaqAndContactSection() {
                   <CheckCircle2 className="mt-0.5 h-6 w-6 shrink-0 text-emerald-400" />
                   <div>
                     <h3 className="font-display text-lg font-bold text-white">
-                      Vielen Dank, {form.fullName}! Ihre Testanfrage ist eingegangen.
+                      Vielen Dank, {form.fullName}! Ihre Testanfrage ist bereit für
+                      info@vision-it-systems.de.
                     </h3>
                     <p className="mt-2 text-sm leading-relaxed text-slate-300">
                       Wir bereiten den kostenlosen 30-Tage-Pilotzugang für{' '}
@@ -148,14 +164,10 @@ export function FaqAndContactSection() {
                     </p>
                     <div className="mt-5 flex flex-wrap items-center gap-3">
                       <a
-                        href={`mailto:kontakt@vision-it-systems.de?subject=${encodeURIComponent(
-                          `Pilot-Anfrage Hausmeister Pro – ${form.company}`
-                        )}&body=${encodeURIComponent(
-                          `Name: ${form.fullName}\nFirma: ${form.company}\nTelefon: ${form.phone}\nE-Mail: ${form.email}\nMitarbeiter: ${form.teamSize}`
-                        )}`}
+                        href={buildMailtoHref()}
                         className="inline-flex items-center gap-2 rounded-lg border border-slate-700 bg-[#0B0F19] px-4 py-2 text-xs font-semibold text-slate-200 hover:bg-slate-800 transition-colors"
                       >
-                        <span>Kopie per E-Mail-Programm senden</span>
+                        <span>E-Mail an info@vision-it-systems.de öffnen</span>
                       </a>
                       <button
                         type="button"

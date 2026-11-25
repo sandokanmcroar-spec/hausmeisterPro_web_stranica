@@ -14,11 +14,11 @@ export function Footer() {
               Vision IT Systems – Hausmeister Pro
             </p>
             <a
-              href="mailto:kontakt@vision-it-systems.de"
+              href="mailto:info@vision-it-systems.de"
               className="mt-1 inline-flex items-center gap-1.5 text-sm text-slate-300 hover:text-orange-400 transition-colors"
             >
               <Mail className="h-3.5 w-3.5 shrink-0" />
-              <span>kontakt@vision-it-systems.de</span>
+              <span>info@vision-it-systems.de</span>
             </a>
           </div>
 
@@ -105,7 +105,7 @@ export function Footer() {
                   <p>
                     Kontakt:
                     <br />
-                    E-Mail: kontakt@vision-it-systems.de
+                    E-Mail: info@vision-it-systems.de
                     <br />
                     Internet: vision-it-systems.de
                   </p>
