@@ -69,7 +69,7 @@ export function Header({ onNavigate }: HeaderProps) {
             onClick={() => onNavigate('kontakt-formular')}
             className="hidden sm:inline-flex items-center justify-center rounded-lg bg-orange-500 px-4 py-2 text-sm font-semibold text-slate-950 hover:bg-orange-400 transition-colors duration-150 whitespace-nowrap shrink-0 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#0B0F19]"
           >
-            60 Tage kostenlos testen
+            30 Tage kostenlos testen
           </button>
 
           <button
@@ -124,7 +124,7 @@ export function Header({ onNavigate }: HeaderProps) {
               }}
               className="mt-2 w-full rounded-lg bg-orange-500 px-4 py-3 text-center text-sm font-semibold text-slate-950 hover:bg-orange-400 transition-colors min-h-[44px]"
             >
-              60 Tage kostenlos testen
+              30 Tage kostenlos testen
             </button>
           </nav>
         </div>

@@ -130,7 +130,7 @@ export function Footer() {
                   <p>
                     <strong className="text-white">Kontaktanfragen:</strong> Die im
                     Testzugangs-Formular eingegebenen Daten verwenden wir ausschließlich zur
-                    Einrichtung Ihres 60-Tage-Pilotzugangs und für persönliche Rückfragen.
+                    Einrichtung Ihres 30-Tage-Pilotzugangs und für persönliche Rückfragen.
                   </p>
                 </>
               )}

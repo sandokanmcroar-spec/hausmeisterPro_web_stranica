@@ -16,6 +16,7 @@ interface PricingTier {
   regularPriceNum: number;
   defaultHoursPerWeek: number;
   highlighted?: boolean;
+  subtleNote?: string;
   features: string[];
 }
 
@@ -45,12 +46,12 @@ export function HowItWorksAndPricing({ onNavigate }: HowItWorksAndPricingProps) 
     {
       id: 'starter',
       name: 'Starter',
-      teamRange: 'bis 10 Mitarbeiter',
-      buttonLabel: 'Bis 10 Mitarbeiter',
-      pilotPrice: '49 €',
-      pilotPriceNum: 49,
-      regularPrice: '69 € / Monat',
-      regularPriceNum: 69,
+      teamRange: 'bis 5 Mitarbeiter',
+      buttonLabel: 'Bis 5 Mitarbeiter',
+      pilotPrice: '59 €',
+      pilotPriceNum: 59,
+      regularPrice: '79 € / Monat',
+      regularPriceNum: 79,
       defaultHoursPerWeek: 4,
       features: [
         'Voller Funktionsumfang (7 Sprachen, Foto-Nachweis, PDF-Protokolle, QR-Zähler & Zeiterfassung)',
@@ -62,12 +63,12 @@ export function HowItWorksAndPricing({ onNavigate }: HowItWorksAndPricingProps) 
     {
       id: 'betrieb',
       name: 'Betrieb',
-      teamRange: '11 bis 20 Mitarbeiter',
-      buttonLabel: 'Bis 20 Mitarbeiter',
-      pilotPrice: '89 €',
-      pilotPriceNum: 89,
-      regularPrice: '119 € / Monat',
-      regularPriceNum: 119,
+      teamRange: '6 bis 15 Mitarbeiter',
+      buttonLabel: '6 bis 15 Mitarbeiter',
+      pilotPrice: '109 €',
+      pilotPriceNum: 109,
+      regularPrice: '139 € / Monat',
+      regularPriceNum: 139,
       defaultHoursPerWeek: 6,
       highlighted: true,
       features: [
@@ -81,19 +82,20 @@ export function HowItWorksAndPricing({ onNavigate }: HowItWorksAndPricingProps) 
     {
       id: 'profi',
       name: 'Profi-Betrieb',
-      teamRange: 'ab 20+ Mitarbeiter',
-      buttonLabel: '20+ Mitarbeiter',
-      pilotPrice: '149 €',
-      pilotPriceNum: 149,
-      regularPrice: '189 € / Monat',
-      regularPriceNum: 189,
+      teamRange: '16 bis 30 Mitarbeiter',
+      buttonLabel: '16 bis 30 Mitarbeiter',
+      pilotPrice: '169 €',
+      pilotPriceNum: 169,
+      regularPrice: '229 € / Monat',
+      regularPriceNum: 229,
       defaultHoursPerWeek: 10,
+      subtleNote: 'Ab 31 Mitarbeitern: +5 € / Mitarbeiter oder individuelles Angebot',
       features: [
         'Voller Funktionsumfang (7 Sprachen, Foto-Nachweis, PDF-Protokolle, QR-Zähler & Zeiterfassung)',
         '0 € Einrichtungsgebühr',
         'Monatlich kündbar',
         'Deutscher Serverstandort (100 % DSGVO)',
-        'Persönlicher Einrichtungs-Support & Objekt-Import',
+        'Persönlicher Einrichtungs-Support & Objekt-Import (bis 50 Objekte)',
       ],
     },
   ];
@@ -167,7 +169,7 @@ export function HowItWorksAndPricing({ onNavigate }: HowItWorksAndPricingProps) 
                   <strong className="text-orange-400">
                     Exklusiv für die ersten 10 Pilot-Partner:
                   </strong>{' '}
-                  60 Tage komplett kostenlos testen (0 €) – und danach den vergünstigten Pilot-Preis{' '}
+                  30 Tage komplett kostenlos testen (0 €) – und danach den vergünstigten Pilot-Preis{' '}
                   <strong className="text-white">DAUERHAFT sichern</strong> (statt der späteren
                   regulären Preise).
                 </p>
@@ -206,7 +208,7 @@ export function HowItWorksAndPricing({ onNavigate }: HowItWorksAndPricingProps) 
                   {/* Pilot Start + Permanent Pilot Price vs Regular Price */}
                   <div className="mt-5 rounded-xl border border-slate-800/90 bg-[#0B0F19] p-4">
                     <p className="text-xs font-semibold text-emerald-400">
-                      Pilot-Start: 0 € für die ersten 60 Tage
+                      Pilot-Start: 0 € für die ersten 30 Tage
                     </p>
 
                     <div className="mt-3">
@@ -223,6 +225,11 @@ export function HowItWorksAndPricing({ onNavigate }: HowItWorksAndPricingProps) 
                           {tier.regularPrice}
                         </span>
                       </p>
+                      {tier.subtleNote && (
+                        <p className="mt-2.5 border-t border-slate-800/80 pt-2.5 text-[11px] leading-snug text-slate-400">
+                          {tier.subtleNote}
+                        </p>
+                      )}
                     </div>
                   </div>
 
@@ -251,7 +258,7 @@ export function HowItWorksAndPricing({ onNavigate }: HowItWorksAndPricingProps) 
                         : 'border border-slate-700 bg-slate-800/90 text-white hover:bg-slate-700'
                     }`}
                   >
-                    <span>60 Tage kostenlos testen</span>
+                    <span>30 Tage kostenlos testen</span>
                     <ArrowRight className="h-4 w-4 shrink-0" />
                   </button>
                 </div>
@@ -284,9 +291,9 @@ export function HowItWorksAndPricing({ onNavigate }: HowItWorksAndPricingProps) 
                 Mitarbeiter.
               </h2>
               <p className="mt-3 text-base leading-relaxed text-slate-300">
-                Wählen Sie Ihr Team-Paket (bis 10, bis 20 oder 20+ Mitarbeiter) zu garantierten
-                Festpreisen – ohne versteckte Kosten oder Pro-Kopf-Gebühren – und berechnen Sie
-                sofort Ihre Ersparnis.
+                Wählen Sie Ihr Team-Paket (bis 5, 6 bis 15 oder 16 bis 30 Mitarbeiter) zu
+                garantierten Festpreisen – ohne versteckte Kosten oder Pro-Kopf-Gebühren – und
+                berechnen Sie sofort Ihre Ersparnis.
               </p>
             </div>
 
@@ -408,7 +415,7 @@ export function HowItWorksAndPricing({ onNavigate }: HowItWorksAndPricingProps) 
                   onClick={() => onNavigate('kontakt-formular')}
                   className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-orange-500 px-5 py-3 text-sm font-bold text-slate-950 hover:bg-orange-400 transition-colors cursor-pointer min-h-[46px]"
                 >
-                  <span>Paket „{activeTier.name}“ 60 Tage kostenlos testen</span>
+                  <span>Paket „{activeTier.name}“ 30 Tage kostenlos testen</span>
                   <ArrowRight className="h-4 w-4 shrink-0" />
                 </button>
 

@@ -120,10 +120,10 @@ export function FaqAndContactSection() {
           <div className="rounded-2xl border border-slate-800 bg-[#111827] p-6 sm:p-10">
             <div className="max-w-xl">
               <p className="text-sm font-semibold text-emerald-400">
-                Unverbindlicher Pilot-Zugang · 60 Tage kostenlos
+                Unverbindlicher Pilot-Zugang · 30 Tage kostenlos
               </p>
               <h2 className="mt-2 font-display text-2xl font-bold tracking-tight text-white sm:text-3xl [text-wrap:balance]">
-                Starten Sie Ihren kostenlosen 60-Tage-Test
+                Starten Sie Ihren kostenlosen 30-Tage-Test
               </h2>
               <p className="mt-2.5 text-sm text-slate-300 sm:text-base">
                 Wir richten Ihren Testzugang persönlich ein und melden uns innerhalb eines
@@ -140,7 +140,7 @@ export function FaqAndContactSection() {
                       Vielen Dank, {form.fullName}! Ihre Testanfrage ist eingegangen.
                     </h3>
                     <p className="mt-2 text-sm leading-relaxed text-slate-300">
-                      Wir bereiten den kostenlosen 60-Tage-Pilotzugang für{' '}
+                      Wir bereiten den kostenlosen 30-Tage-Pilotzugang für{' '}
                       <strong className="text-white">{form.company}</strong> ({form.teamSize}{' '}
                       Mitarbeiter) vor und kontaktieren Sie kurzfristig unter{' '}
                       <strong className="text-white">{form.phone}</strong> oder{' '}
@@ -312,7 +312,7 @@ export function FaqAndContactSection() {
                     <Lock className="mt-0.5 h-3.5 w-3.5 shrink-0 text-emerald-400" />
                     <span>
                       DSGVO-Hinweis: Ihre Angaben werden ausschließlich zur Einrichtung Ihres
-                      unverbindlichen 60-Tage-Testzugangs und zur persönlichen Kontaktaufnahme
+                      unverbindlichen 30-Tage-Testzugangs und zur persönlichen Kontaktaufnahme
                       verwendet. Keine Weitergabe an Dritte, keine Werbe-Newsletter, Hosting
                       ausschließlich in Deutschland.
                     </span>
